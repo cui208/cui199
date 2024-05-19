@@ -30,7 +30,33 @@
   <p><a href="https://cui208.github.io/cui199/tongnian.html">童年</a> </p>
     </div>
 <!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <title>Go Back Example</title></head><body><button onclick="goBack()">返回上一步</button><script>    function goBack() {        history.back();    }</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WWW 文档设计</title>
+</head>
+<body>
 
+<!-- 页面内容（省略） -->
+
+<!-- 主页正下方的“退出”按钮 -->
+<button onclick="goBack()">退出</button>
+
+<script>
+function goBack() {
+    // 尝试返回到上一级页面
+    window.history.back();
+    
+    // 注意：如果页面不是通过 window.open() 打开的，或者浏览器出于安全考虑禁用了 window.close()，
+    // 那么以下代码可能无效
+    // window.close(); // 这将尝试关闭当前窗口或标签页
+}
+</script>
+
+</body>
+</html>
 
   </body>
 </html>
